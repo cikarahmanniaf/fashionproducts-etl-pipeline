@@ -6,26 +6,23 @@ Proyek ini merupakan implementasi pipeline ETL (Extract, Transform, Load) untuk 
 
 ## Struktur Proyek
 
-├── main.py 
-├── utils
-│ ├── extract.py
-│ ├── transform.py
-│ └── load.py
-├── tests # Unit testing
-│ ├── test_extract.py
-│ ├── test_transform.py
-│ └── test_load.py
-├── products_raw.csv # Data mentah hasil ekstraksi
-├── products_clean.csv # Data bersih hasil transformasi
-├── products_final.csv # Data final
-├── google-sheets-api.json # Kredensial API Google Sheets
-├── products-googlesheets-check.py 
-├── products-postgreSQL-check.py
-├── requirements.txt # Daftar dependencies Python
-└── submission.txt # Penjelasan cara menjalankan
-
----
-
+- `main.py` 
+- `utils/`
+  - `extract.py` - Modul ekstraksi data (web scraping)
+  - `transform.py` - Modul transformasi dan pembersihan data
+  - `load.py` - Modul penyimpanan data (CSV, Google Sheets, PostgreSQL)
+- `tests/`
+  - `test_extract.py` - Unit test untuk ekstraksi
+  - `test_transform.py` - Unit test untuk transformasi
+  - `test_load.py` - Unit test untuk load
+- `products_raw.csv` - Data mentah hasil ekstraksi
+- `products_clean.csv` - Data bersih hasil transformasi
+- `products_final.csv` - Data akhir yang sudah siap
+- `google-sheets-api.json` - Kredensial API untuk akses Google Sheets
+- `products-googlesheets-check.py` - Skrip opsional cek Google Sheets
+- `products-postgreSQL-check.py` - Skrip opsional cek PostgreSQL
+- `requirements.txt` - Daftar dependensi
+- `submission.txt` - Petunjuk cara menjalankan
 
 ---
 
@@ -43,11 +40,11 @@ python -m pytest tests
 
 Test Coverage
 -------------
-# Melihat Test Coverage
+Melihat Test Coverage
 coverage run -m pytest tests
 coverage report
 
-# Melihat Test Coverage Setiap Unit testing
+Melihat Test Coverage Setiap Unit testing
 coverage run -m pytest tests/test_extract.py
 coverage report
 
