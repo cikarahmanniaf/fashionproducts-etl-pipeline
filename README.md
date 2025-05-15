@@ -27,24 +27,17 @@ Proyek ini merupakan implementasi pipeline ETL (Extract, Transform, Load) untuk 
 ---
 
 Penjelasan cara menjalankan:
-
-ETL
------
-# Menjalankan skrip ETL
+### Menjalankan skrip ETL
 python main.py
 
-Unit Test
----------
-# Menjalankan Unit Test
+### Menjalankan Unit Test
 python -m pytest tests
 
-Test Coverage
--------------
-Melihat Test Coverage
+### Melihat Test Coverage
 coverage run -m pytest tests
 coverage report
 
-Melihat Test Coverage Setiap Unit testing
+### Melihat Test Coverage Setiap Unit testing
 coverage run -m pytest tests/test_extract.py
 coverage report
 
@@ -54,7 +47,7 @@ coverage report
 coverage run -m pytest tests/test_load.py
 coverage report
 
-URL Google Sheets
+### URL Google Sheets
 -----------------
 https://docs.google.com/spreadsheets/d/1E8ak4iI-mtbPX7Bzmj9tfn4h8llpj-b72SBoa8QSwow/edit?gid=0#gid=0
 
